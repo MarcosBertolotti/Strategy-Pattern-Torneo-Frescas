@@ -42,7 +42,7 @@ public class Simulador {
             } while (p1.getOrinaRetenida() < p1.getTolerancia() && p2.getOrinaRetenida() < p2.getTolerancia());
 
             ganador = verificarGanador();
-        }while(ganador ==  null);
+        }while(!Optional.ofNullable(ganador).isPresent());
 
         return ganador;
     }
