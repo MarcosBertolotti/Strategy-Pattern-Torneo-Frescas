@@ -69,8 +69,11 @@ public class Main {
         System.out.println("\nEl ganador se enfrenta al tabernero: ");
         System.out.println(ganador + "\n" + tabernero);
 
+        ganador.restablecerEstadisticas();
+        
         simulador = new Simulador(ganador,tabernero);
         Humano ganador2 = simulador.duelo();
+        
         System.out.println("\nEl ganador del duelo es: " + ganador2.getNombre());
         System.out.println("\nRESULTADO vs BOSS: \n");
         mostrarResultado(ganador,tabernero);
