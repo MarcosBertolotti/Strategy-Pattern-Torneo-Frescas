@@ -108,7 +108,12 @@ public abstract class Humano {
     }
 
     public abstract void beberTurno(Integer bebido, double orina,Random random);
-
+    
+    public void restablecerEstadisticas(){
+        this.totalBebido = 0;
+        this.orinaRetenida = 0;
+    }
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
